@@ -1,0 +1,41 @@
+{% extends 'pages/base.html' %}
+{% block title %}login{% endblock title %}
+{% load static %}
+
+
+
+{% block content %}    
+<link rel="stylesheet" href={% static 'css/login-style.css' %}>
+<body>
+    
+    <div class ="login">
+
+    
+    <section>
+        <div class="form-conterner">
+            <img src="{% static 'images/166340.png'%}" alt="logo">
+            <h1>Login Form</h1>
+            <form action="#">
+               <div class="control">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
+               </div> 
+               <div class="control">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+               </div> 
+               <span><input type="checkbox"> Remember Me.</span>
+               <div class="control">
+                <input type="submit" value = "Login">
+               </div>
+            </form>
+            <div class="link">
+                <a href="#">Fogot password
+                </a>
+            </div>
+        </div>
+    </section>
+    </div>
+</body>
+
+{% endblock  %}
